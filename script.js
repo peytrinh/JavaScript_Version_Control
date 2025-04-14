@@ -1,43 +1,27 @@
-// Hover "3D Models"
-const highlightText = document.querySelector(".highlight");
-highlightText.addEventListener("mouseover", function () {
-    highlightText.style.backgroundColor = "#e6ce8c";
-});
-highlightText.addEventListener("mouseout", function () {
-    highlightText.style.backgroundColor = "";
+// Alert
+document.getElementById("alertMe").addEventListener("click", function () {
+    alert("Hey there! Thanks for checking out my page!");
 });
 
-// <otivation <essages
-const messages = [
-    "Keep going, you're doing great!",
-    "Design takes practice — and you're on your way!",
-    "You're more creative than you think!",
-    "Don't forget to drink water and vibe"
-];
+// Hover
+const hoverBtn = document.getElementById("hoverButton");
+hoverBtn.onmouseover = function () {
+    hoverBtn.style.backgroundColor = "#ffcccb"; // light pink
+};
+hoverBtn.onmouseleave = function () {
+    hoverBtn.style.backgroundColor = "#cce5ff"; // light blue
+};
 
-const messageButton = document.getElementById("motivateBtn");
-const messageDisplay = document.getElementById("motivationDisplay");
+// Counter
+let count = 0;
+document.getElementById("buttonCounter").addEventListener("click", function () {
+    count += 1;
+    const counterPara = document.getElementById("counter");
+    counterPara.innerHTML = "You clicked " + count + " times.";
 
-messageButton.addEventListener("click", function () {
-    const randomIndex = Math.floor(Math.random() * messages.length);
-    messageDisplay.textContent = messages[randomIndex];
-});
-
-// Favorite tools list loop
-const tools = ["Illustrator", "Photoshop", "Figma"];
-const toolList = document.getElementById("toolList");
-
-for (let i = 0; i < tools.length; i++) {
-    const item = document.createElement("li");
-    item.textContent = tools[i];
-    toolList.appendChild(item);
-}
-
-// Fun Fact button
-document.addEventListener("DOMContentLoaded", function () {
-    const funFactBtn = document.getElementById("funFactBtn");
-
-    funFactBtn.addEventListener("click", function () {
-        alert("Fun fact: I got the nickname 'Peach' from my family!");
-    });
+    if (count % 2 === 0) {
+        counterPara.style.color = "pink"; // even
+    } else {
+        counterPara.style.color = "tan"; // odd
+    }
 });
