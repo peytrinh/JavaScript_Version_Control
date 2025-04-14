@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peyton About Me</title>
     <link href="style.css" rel="stylesheet">
-    <script defer src="script.js"></script>
+    <script defer src="script.js"></script> <!-- JS included -->
 </head>
 <body>
     <header>
@@ -16,11 +16,13 @@
     </header>
 
     <main>
+        <!-- About Me -->
         <h1>Hi, I'm Peyton</h1>
         <h2>About Me</h2>
         <p>I'm a student learning Interactive Design. I enjoy working with visuals like logos and posters.</p>
         <p>I like working with <span class="highlight">3D Models</span> and graphics.</p>
 
+        <!-- Skills list -->
         <h2>Skills I'm Learning</h2>
         <ul>
             <li>HTML</li>
@@ -28,7 +30,16 @@
             <li>Logo Design</li>
         </ul>
 
-        <p>Check out <a class="link" href="portfolio.html">my portfolio here</a>.</p>
+        <!-- For loop output -->
+        <h3>My Favorite Tools</h3>
+        <ul id="toolList"></ul>
+
+        
+        <!-- Interactive Buttons -->
+        <button id="motivateBtn">Need a Boost?</button>
+        <p id="motivationDisplay"></p>
+        <button id="funFactBtn">Click for a fun fact about me!</button>
+
     </main>
 </body>
 </html>
